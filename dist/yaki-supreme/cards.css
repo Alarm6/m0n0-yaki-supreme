@@ -1,0 +1,30 @@
+/* Optical color fields: dark cores, luminous rings, contrasting edges. */
+.palette-0{--gradient:radial-gradient(ellipse 45% 75% at 47% 50%,#173e22 0%,#2f7029 25%,#80a346 48%,#e1a27e 76%,#f4c2b1 100%)}
+.palette-1{--gradient:radial-gradient(ellipse 68% 57% at 64% 54%,#001d33 0%,#005a80 34%,#13ada8 64%,#abdcc0 100%)}
+.palette-2{--gradient:radial-gradient(ellipse 45% 74% at 43% 51%,#44112d 0%,#8e1249 31%,#d83284 62%,#e8acc8 100%)}
+.palette-3{--gradient:radial-gradient(ellipse 58% 78% at 48% 49%,#020610 0%,#06102a 33%,#1436b0 64%,#426df3 82%,#b9d4e9 100%)}
+.palette-4{--gradient:radial-gradient(ellipse 55% 70% at 50% 54%,#112e58 0%,#294b8b 32%,#6574d0 57%,#a4b4ee 77%,#c9dce9 100%)}
+.palette-5{--gradient:radial-gradient(ellipse 70% 37% at 46% 52%,#012832 0%,#076068 27%,#42e7d2 55%,#238d8f 73%,#a2d3bd 100%)}
+.palette-6{--gradient:radial-gradient(ellipse 45% 78% at 49% 49%,#72164e 0%,#bd2867 29%,#ff684b 58%,#ffc780 80%,#efd3ad 100%)}
+.palette-7{--gradient:radial-gradient(ellipse 43% 60% at 48% 49%,#152819 0%,#397424 24%,#b4f923 48%,#77a843 65%,#e1d5a9 100%)}
+.palette-8{--gradient:radial-gradient(ellipse 70% 38% at 47% 53%,#72130e 0%,#e23911 33%,#ff7f2a 53%,#ffdb9b 66%,#dfa5b6 100%)}
+.palette-9{--gradient:radial-gradient(ellipse 65% 38% at 52% 53%,#201341 0%,#5f2caa 28%,#e893fa 53%,#8152c7 72%,#bcb0dd 100%)}
+.product-art:before,.detail-art:before{inset:-4%;filter:blur(10px);transform:scale(1.03)}
+.product-art:hover:before{transform:scale(1.07)}
+.art-open{padding:0;display:block}
+.art-open img{position:absolute;left:17%;top:7%;width:125%;height:125%;object-fit:contain;transform:rotate(-7deg);transform-origin:60% 55%;filter:drop-shadow(-5px 18px 12px #140a152d);transition:transform .55s cubic-bezier(.2,.7,.3,1)}
+.product-art:nth-child(2n) .art-open img{top:10%}
+.product-art:hover .art-open img,.art-open:focus-visible img{transform:translateY(-10px) rotate(-7deg) scale(1.08)}
+.art-open:active img{transform:translateY(-16px) rotate(-7deg) scale(1.1)}
+.product-tag{color:#fff;background:#ffffff15;border-color:#ffffff26;text-shadow:0 1px 7px #15223955;backdrop-filter:blur(8px)}
+.favorite{color:#fff;background:#ffffff20;border:1px solid #ffffff38}
+.favorite[aria-pressed=true]{color:#fff;background:#d94e8180}
+@media(max-width:760px){.art-open{padding:0}.product-art:before{filter:blur(7px)}}
+@media(prefers-reduced-motion:reduce){.art-open img,.product-art:before{transition:none}}
+
+.brand{position:relative;display:block;overflow:hidden;width:184px;height:36px;flex-shrink:0;mix-blend-mode:multiply}
+.brand .brand-wordmark{position:absolute;max-width:none;width:126%;height:auto;left:-13%;top:50%;transform:translateY(-50%)}
+.detail-art img,.order-hero-image{animation:food-float 5.5s infinite ease-in-out}
+@keyframes food-float{0%,100%{transform:translateY(4px) rotate(0) scale(1)}50%{transform:translateY(-22px) rotate(-4deg) scale(1.035)}}
+@media(max-width:760px){.brand{width:155px;height:31px}}
+@media(prefers-reduced-motion:reduce){.detail-art img,.order-hero-image{animation:none}.art-open:active img,.product-art:hover .art-open img{transform:rotate(-7deg)}}
